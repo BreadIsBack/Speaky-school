@@ -1,0 +1,23 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  &__nav {
+    margin-left: 76px;
+    margin-right: 266px;
+  }
+
+  &__contacts {
+    margin-right: 32px;
+    display: flex;
+  }
+
+  &__svg {
+    width: 18px;
+    height: 18px;
+  }
+}

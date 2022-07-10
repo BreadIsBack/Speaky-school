@@ -1,0 +1,219 @@
+.education {
+  &__container {
+    max-width: 896px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 427px;
+    margin-bottom: 34px;
+  }
+
+  &__list {
+    margin-bottom: 97px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+
+    &:not(:last-child) {
+      margin-right: 89px;
+    }
+
+    &:nth-child(4) {
+      min-width: 135px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 15px;
+      left: 50%;
+      width: 68px;
+      height: 71px;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    &--specific {
+      &::before {
+        background-image: url('../img/education/specific.svg');
+      }
+    }
+
+    &--measurable {
+      &::before {
+        background-image: url('../img/education/measurable.svg');
+      }
+    }
+
+    &--achievable {
+      &::before {
+        background-image: url('../img/education/achievable.svg');
+      }
+    }
+
+    &--relevant {
+      &::before {
+        background-image: url('../img/education/relevant.svg');
+      }
+    }
+
+    &--time {
+      &::before {
+        background-image: url('../img/education/time.svg');
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+    min-width: 88px;
+  }
+
+  &__small-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--dark-color);
+  }
+
+  &__example {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: 53px;
+  }
+
+  &__example-title {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  &__example-descr {
+    margin: 0;
+  }
+
+  &__steps-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__steps-item {
+    position: relative;
+    max-width: 550px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 200px;
+      align-self: flex-end;
+
+      &:before {
+        left: -20px;
+        background-image: url('../img/education/arrow-left.svg');
+      }
+    }
+
+    &:nth-child(odd) {
+      padding-right: 200px;
+
+      &:not(:last-child) {
+        &::before {
+          right: 10px;
+          background-image: url('../img/education/arrow-right.svg');
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 128px;
+      height: 128px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__steps-title {
+    margin: 0;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 219px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 68px;
+      height: 81px;
+      left: -25px;
+      top: -25px;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--1 {
+      &::before {
+        background-image: url('../img/education/1.svg');
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-image: url('../img/education/2.svg');
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-image: url('../img/education/3.svg');
+      }
+    }
+
+    &--4 {
+      &::before {
+        background-image: url('../img/education/4.svg');
+      }
+    }
+
+    &--5 {
+      &::before {
+        background-image: url('../img/education/5.svg');
+      }
+    }
+  }
+
+  &__steps-descr {
+    margin: 0;
+    max-width: 321px;
+
+    &--5 {
+      max-width: 209px;
+    }
+  }
+}

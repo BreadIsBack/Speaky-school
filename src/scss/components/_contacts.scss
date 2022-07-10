@@ -1,0 +1,17 @@
+.contacts {
+  &__svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+}

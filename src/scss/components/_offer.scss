@@ -1,0 +1,82 @@
+.offer {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__top {
+    margin-bottom: 140px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__top-img {
+    margin-right: 120px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    max-width: 187px;
+
+    &--top-online {
+      margin-right: 26px;
+    }
+
+    &--bottom-offline {
+      margin-right: 46px;
+    }
+
+    &--bottom-online {
+      max-width: 222px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    padding-left: 20px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 10px;
+      width: 10px;
+      height: 10px;
+      background-image: url('../img/check-mark.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom-img {
+    margin-left: 84px;
+  }
+}

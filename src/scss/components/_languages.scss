@@ -1,0 +1,31 @@
+.languages {
+  &__container {
+    padding: 75px 220px 85px 213px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    margin-right: 30px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--main-color);
+  }
+}
