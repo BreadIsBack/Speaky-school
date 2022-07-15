@@ -1,6 +1,7 @@
 .languages {
   &__container {
     padding: 75px 220px 85px 213px;
+    @include background;
   }
 
   &__title {

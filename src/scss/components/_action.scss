@@ -1,0 +1,23 @@
+.action {
+  &__container {
+    padding: 67px 100px 67px 100px;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffbed;
+  }
+
+  &__inner {
+    margin-right: 181px;
+    max-width: 333px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    display: block;
+  }
+}

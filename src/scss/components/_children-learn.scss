@@ -1,0 +1,44 @@
+.children-learn {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 428px 275px 381px;
+    grid-gap: 65px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:nth-child(2) {
+      padding-left: 20px;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 78px;;
+        width: 6px;
+        left: 0;
+        background-color: #fdd503;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-left: 20px;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 78px;;
+        width: 6px;
+        left: 0;
+        background-color: #fe7167;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    color: var(--dark-color);
+  }
+}

@@ -8,24 +8,33 @@
   }
 
   &__slide-timeline {
-    margin-left: 45px;
-    margin-bottom: 7px;
+
+    margin-bottom: 60px;
     display: flex;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      width: 100%;
+      height: 2px;
+      background-color: #61b5a9;
+    }
   }
 
   &__years {
     display: inline-block;
-    &:not(:last-child) {
-      margin-right: 20%;
-    }
-  }
 
-  &__line {
-    margin-bottom: 60px;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #61b5a9;
+    &:not(:last-child) {
+      margin-right: 211px;
+    }
+
+    &:first-child {
+      margin-left: 45px;
+    }
   }
 
   &__slide-container {
@@ -45,11 +54,6 @@
 
   &__subtitle {
     margin-bottom: 13px;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 0.02em;
-    color: var(--main-color);
   }
 
   &__descr {
@@ -73,12 +77,19 @@
   margin-left: 50px;
 }
 
+.swiper-pagination-bullet:hover {
+  background-color: #689c9a;
+  filter: blur(2px);
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border: 2px solid #61b5a9;
   background-color: #fff;
   opacity: 1;
+  transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {

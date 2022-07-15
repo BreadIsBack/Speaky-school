@@ -1,0 +1,72 @@
+.results {
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 253px 311px 260px;
+    justify-content: center;
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
+  }
+
+  &__item {
+    padding: 94px 37px 28px;
+    background-color: #fffBed;
+    border-radius: 30px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      top: 28px;
+      left: 37px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--books {
+      &::before {
+        background-image: url('../img/results/results-1.svg');
+      }
+    }
+
+    &--device {
+      &::before {
+        background-image: url('../img/results/results-2.svg');
+      }
+    }
+
+    &--brain {
+      &::before {
+        background-image: url('../img/results/results-3.svg');
+      }
+    }
+
+    &--innovation {
+      &::before {
+        background-image: url('../img/results/results-4.svg');
+      }
+    }
+
+    &--audiobook {
+      &::before {
+        background-image: url('../img/results/results-5.svg');
+      }
+    }
+
+    &--network {
+      &::before {
+        background-image: url('../img/results/results-6.svg');
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
