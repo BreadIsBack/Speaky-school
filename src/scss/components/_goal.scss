@@ -1,0 +1,28 @@
+.goal {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    margin-right: 88px;
+  }
+
+  &__content {
+    max-width: 445px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    display: block;
+  }
+
+  &__descr {
+    margin: 0;
+
+  }
+}

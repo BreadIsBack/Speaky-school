@@ -1,23 +1,13 @@
-import {
-  validateForms
-} from '../functions/validate-forms';
-// const formAdultOne = document.querySelector('.tabs__form--adult-1');
-// const formChildOne = document.querySelector('.tabs__form--child-1');
-// const formAdultTwo = document.querySelector('.tabs__form--child-2');
-// const formChildTwo = document.querySelector('.tabs__form--child-2');
-const forms = document.querySelectorAll('.tabs__form');
-
-// `.tabs__form-${index + 1}`
+import {validateForms} from '../functions/validate-forms';
+const forms = document.querySelectorAll('.form-box__form');
 
 if (forms) {
 
-    let counterAdult = 0;
-    let counterChild = 0;
-
   forms.forEach((form, index) => {
+    form.className = `form-${index} form-box__form`;
       if (form.dataset.form == 'adult-form') {
         const rules = [{
-            ruleSelector: '.tabs__input-name',
+            ruleSelector: '.form-box__input-name',
             rules: [{
               rule: 'required',
               value: true,
@@ -25,7 +15,7 @@ if (forms) {
             }]
           },
           {
-            ruleSelector: '.tabs__input-phone',
+            ruleSelector: '.form-box__input-phone',
             tel: true,
             telError: 'Введите корректный телефон',
             rules: [{
@@ -35,7 +25,7 @@ if (forms) {
             }]
           },
           {
-            ruleSelector: '.tabs__input-email',
+            ruleSelector: '.form-box__input-email',
             rules: [{
                 rule: 'required',
                 value: true,
@@ -54,13 +44,12 @@ if (forms) {
           console.log('Произошла отправка, тут можно писать любые действия');
         };
 
-        validateForms(`.tabs__form--adult-${counterAdult + 1}`, rules, afterForm);
-        counterAdult++;
+        validateForms(`.form-${index}`, rules, afterForm);
       };
 
       if (form.dataset.form == 'child-form') {
         const rules = [{
-            ruleSelector: '.tabs__input-name',
+            ruleSelector: '.form-box__input-name',
             rules: [{
               rule: 'required',
               value: true,
@@ -68,7 +57,7 @@ if (forms) {
             }]
           },
           {
-            ruleSelector: '.tabs__input-phone',
+            ruleSelector: '.form-box__input-phone',
             tel: true,
             telError: 'Введите корректный телефон',
             rules: [{
@@ -78,7 +67,7 @@ if (forms) {
             }]
           },
           {
-            ruleSelector: '.tabs__input-email',
+            ruleSelector: '.form-box__input-email',
             rules: [{
                 rule: 'required',
                 value: true,
@@ -92,7 +81,7 @@ if (forms) {
             ]
           },
           {
-            ruleSelector: '.tabs__input-child',
+            ruleSelector: '.form-box__input-child',
             rules: [{
               rule: 'required',
               value: true,
@@ -100,7 +89,7 @@ if (forms) {
             }]
           },
           {
-            ruleSelector: '.tabs__input-age',
+            ruleSelector: '.form-box__input-age',
             rules: [{
               rule: 'required',
               value: true,
@@ -113,315 +102,59 @@ if (forms) {
           console.log('Произошла отправка, тут можно писать любые действия');
         };
 
-        validateForms(`.tabs__form--child-${counterChild + 1}`, rules, afterForm);
-        counterChild++;
+        validateForms(`.form-${index}`, rules, afterForm);
       };
-      console.log(counterAdult);
+
+      if (form.dataset.form == 'payment-form') {
+        const rules = [{
+            ruleSelector: '.form-box__input-name',
+            rules: [{
+              rule: 'required',
+              value: true,
+              errorMessage: 'Заполните имя!'
+            }]
+          },
+          {
+            ruleSelector: '.form-box__input-phone',
+            tel: true,
+            telError: 'Введите корректный телефон',
+            rules: [{
+              rule: 'required',
+              value: true,
+              errorMessage: 'Заполните телефон!'
+            }]
+          },
+          {
+            ruleSelector: '.form-box__input-email',
+            rules: [{
+                rule: 'required',
+                value: true,
+                errorMessage: 'Заполните Email!'
+              },
+              {
+                rule: 'email',
+                value: true,
+                errorMessage: 'Введите корректный Email!'
+              }
+            ]
+          },
+          {
+            ruleSelector: '.form-box__input-summ',
+            rules: [{
+              rule: 'required',
+              value: true,
+              errorMessage: 'Заполните сумму!'
+            }]
+          },
+        ];
+
+        const afterForm = () => {
+          console.log('Произошла отправка, тут можно писать любые действия');
+        };
+
+        validateForms(`.form-${index}`, rules, afterForm);
+      };
+
   });
 };
 
-
-// if (form.dataset.form == 'children-form') {
-//   const rules = [
-//     {
-//       ruleSelector: '.tabs__input-name',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-phone',
-//       tel: true,
-//       telError: 'Введите корректный телефон',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните телефон!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-email',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните Email!'
-//         },
-//         {
-//           rule: 'email',
-//           value: true,
-//           errorMessage: 'Введите корректный Email!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-child',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя ребенка!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-age',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните возраст ребенка!'
-//         }
-//       ]
-//     },
-//   ];
-
-//   const afterForm = () => {
-//     console.log('Произошла отправка, тут можно писать любые действия');
-//   };
-
-//   validateForms('.tabs__form', rules, afterForm);
-// }
-
-
-
-
-// if (formAdultOne) {
-//   const rules = [
-//     {
-//       ruleSelector: '.tabs__input-name',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-phone',
-//       tel: true,
-//       telError: 'Введите корректный телефон',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните телефон!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-email',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните Email!'
-//         },
-//         {
-//           rule: 'email',
-//           value: true,
-//           errorMessage: 'Введите корректный Email!'
-//         }
-//       ]
-//     },
-//   ];
-
-//   const afterForm = () => {
-//     console.log('Произошла отправка, тут можно писать любые действия');
-//   };
-
-//   validateForms('.tabs__form--adult-1', rules, afterForm);
-// }
-
-// if (formChildOne) {
-//   const rules = [
-//     {
-//       ruleSelector: '.tabs__input-name',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-phone',
-//       tel: true,
-//       telError: 'Введите корректный телефон',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните телефон!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-email',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните Email!'
-//         },
-//         {
-//           rule: 'email',
-//           value: true,
-//           errorMessage: 'Введите корректный Email!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-child',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя ребенка!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-age',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните возраст ребенка!'
-//         }
-//       ]
-//     },
-//   ];
-
-//   const afterForm = () => {
-//     console.log('Произошла отправка, тут можно писать любые действия');
-//   };
-
-//   validateForms('.tabs__form--child-1', rules, afterForm);
-// }
-
-
-
-// if (formAdultTwo) {
-//   const rules = [
-//     {
-//       ruleSelector: '.tabs__input-name',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-phone',
-//       tel: true,
-//       telError: 'Введите корректный телефон',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните телефон!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-email',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните Email!'
-//         },
-//         {
-//           rule: 'email',
-//           value: true,
-//           errorMessage: 'Введите корректный Email!'
-//         }
-//       ]
-//     },
-//   ];
-
-//   const afterForm = () => {
-//     console.log('Произошла отправка, тут можно писать любые действия');
-//   };
-
-//   validateForms('.tabs__form--adult-2', rules, afterForm);
-// }
-
-// if (formChildTwo) {
-//   const rules = [
-//     {
-//       ruleSelector: '.tabs__input-name',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-phone',
-//       tel: true,
-//       telError: 'Введите корректный телефон',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните телефон!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-email',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните Email!'
-//         },
-//         {
-//           rule: 'email',
-//           value: true,
-//           errorMessage: 'Введите корректный Email!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-child',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните имя ребенка!'
-//         }
-//       ]
-//     },
-//     {
-//       ruleSelector: '.tabs__input-age',
-//       rules: [
-//         {
-//           rule: 'required',
-//           value: true,
-//           errorMessage: 'Заполните возраст ребенка!'
-//         }
-//       ]
-//     },
-//   ];
-
-//   const afterForm = () => {
-//     console.log('Произошла отправка, тут можно писать любые действия');
-//   };
-
-//   validateForms('.tabs__form--child-2', rules, afterForm);
-// }

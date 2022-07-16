@@ -1,0 +1,58 @@
+.steps {
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 147px 154px 129px 171px;
+    grid-column-gap: 91px;
+    justify-content: center;
+  }
+
+  &__item {
+    padding-top: 90px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 70px;
+      height: 70px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--1 {
+      &::before {
+        background-image: url('../img/steps/1.svg');
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-image: url('../img/steps/2.svg');
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-image: url('../img/steps/3.svg');
+      }
+    }
+
+    &--4 {
+      &::before {
+        background-image: url('../img/steps/4.svg');
+      }
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+}

@@ -1,0 +1,29 @@
+.tasks {
+  &__container {
+    @include background;
+
+    padding: 100px 243px 103px 197px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    margin-right: 94px;
+    max-width: 435px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    display: block;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 40px;
+    max-width: 320px;
+  }
+}

@@ -15,8 +15,11 @@
 
   &__container {
     padding: 0;
-    
     border-radius: 70px;
+
+    &--payment {
+      max-width: 860px;
+    }
   }
 
   &__close {
@@ -29,5 +32,9 @@
     line-height: 26px;
     letter-spacing: 0.02em;
     color: var(--main-color);
+
+    &--payment {
+      right: 270px;
+    }
   }
 }

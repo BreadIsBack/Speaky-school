@@ -1,0 +1,120 @@
+.form-box {
+  &__input {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+
+    &::placeholder {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+      color: var(--main-color);
+    }
+  }
+
+  &__label-email {
+    margin-bottom: 14px;
+  }
+
+  &__label-summ {
+    margin-bottom: 24px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label-select {
+    margin-bottom: 15px;
+  }
+
+  &__radio-field {
+    margin-bottom: 14px;
+  }
+
+  &__label-radio {
+    &:not(:last-child) {
+      margin-right: 67px;
+    }
+  }
+
+  &__input-radio {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__radio-text {
+    position: relative;
+    display: inline-block;
+    padding-left: 26px;
+  }
+
+  &__radio-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border: 1px solid #236967;
+    border-radius: 100%;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &__radio-text::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    background-color: #236967;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__input-radio:checked+&__radio-text::after {
+    opacity: 1;
+  }
+
+  &__adult-field,
+  &__child-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  &__label-name {
+    margin-right: 20px;
+  }
+
+  &__input-age,
+  &__input-summ {
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 399px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
