@@ -1,16 +1,12 @@
 import GraphTabs from 'graph-tabs';
-const tabOneMain = document.getElementById('tab-1');
-const tabTwoMain = document.getElementById('tab-2');
-const tabTrial = document.getElementById('tab-3');
 
-if (tabOneMain) {
-  const firstTab = new GraphTabs('tab-1');
-}
+const tabs = document.querySelectorAll('.tabs');
 
-if (tabTwoMain) {
-  const secondTab = new GraphTabs('tab-2');
-}
+if (tabs) {
 
-if (tabTrial) {
-  const secondTab = new GraphTabs('tab-3');
+  tabs.forEach((tab, index) => {
+    tab.setAttribute('data-tabs', `tab-${index}`);
+    const currentTab = new GraphTabs(`tab-${index}`);
+  });
+
 }

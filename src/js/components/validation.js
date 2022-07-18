@@ -4,7 +4,8 @@ const forms = document.querySelectorAll('.form-box__form');
 if (forms) {
 
   forms.forEach((form, index) => {
-    form.className = `form-${index} form-box__form`;
+    const formClass = `form-${index}`;
+    form.classList.add(formClass);
       if (form.dataset.form == 'adult-form') {
         const rules = [{
             ruleSelector: '.form-box__input-name',
@@ -44,7 +45,7 @@ if (forms) {
           console.log('Произошла отправка, тут можно писать любые действия');
         };
 
-        validateForms(`.form-${index}`, rules, afterForm);
+        validateForms(`.${formClass}`, rules, afterForm);
       };
 
       if (form.dataset.form == 'child-form') {
@@ -102,7 +103,7 @@ if (forms) {
           console.log('Произошла отправка, тут можно писать любые действия');
         };
 
-        validateForms(`.form-${index}`, rules, afterForm);
+        validateForms(`.${formClass}`, rules, afterForm);
       };
 
       if (form.dataset.form == 'payment-form') {
@@ -152,7 +153,7 @@ if (forms) {
           console.log('Произошла отправка, тут можно писать любые действия');
         };
 
-        validateForms(`.form-${index}`, rules, afterForm);
+        validateForms(`.${formClass}`, rules, afterForm);
       };
 
   });

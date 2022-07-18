@@ -1,112 +1,116 @@
 <section class="lesson section-offset">
   <div class="container-small">
-    <div class="trial trial__container">
-      <div class="trial__content">
-        <h2 class="trial__title title-submain">записаться на пробное занятие</h2>
-        <div class="tabs" data-tabs="tab-1" id="tab-1">
-          <ul class="tabs__nav list-reset">
-            <li class="tabs__nav-item">
-              <button class="tabs__nav-btn btn-reset title-small" type="button">Взрослые</button>
-            </li>
-            <li class="tabs__nav-item">
-              <button class="tabs__nav-btn btn-reset title-small" type="button">Дети и подростки</button>
-            </li>
-          </ul>
-          <div class="tabs__content">
-            <div class="tabs__panel">
-              <div class="form-box">
-                <form class="form-box__form form-box__form--adult-1" data-form="adult-form">
-                  <div class="form-box__inner">
-                    <label class="form-box__label-select">
-                      <select class="form-box__select">
-                        <option value="english" class="form-box__option">Английский язык</option>
-                        <option value="german" class="form-box__option">Немецкий язык</option>
-                        <option value="spanish" class="form-box__option">Испанский язык</option>
-                        <option value="french" class="form-box__option">Французский язык</option>
-                      </select>
-                    </label>
-                    <div class="form-box__radio-field">
-                      <label class="form-box__label-radio">
-                        <input type="radio" class="form-box__input-radio" name="radio" value="1" checked>
-                        <span class="form-box__radio-text">Онлайн-занятия</span>
+    <div class="trial">
+      <div class="trial__container">
+        <div class="trial__content">
+          <h2 class="trial__title title-submain">записаться на пробное занятие</h2>
+          <div class="tabs">
+            <ul class="tabs__nav list-reset">
+              <li class="tabs__nav-item">
+                <button class="tabs__nav-btn btn-reset title-small" type="button">Взрослые</button>
+              </li>
+              <li class="tabs__nav-item">
+                <button class="tabs__nav-btn btn-reset title-small" type="button">Дети и подростки</button>
+              </li>
+            </ul>
+            <div class="tabs__content">
+              <div class="tabs__panel">
+                <div class="form-box">
+                  <form class="form-box__form" data-form="adult-form">
+                    <div class="form-box__inner">
+                      <label class="form-box__label-select">
+                        <select class="form-box__select">
+                          <option value="english" class="form-box__option">Английский язык</option>
+                          <option value="german" class="form-box__option">Немецкий язык</option>
+                          <option value="spanish" class="form-box__option">Испанский язык</option>
+                          <option value="french" class="form-box__option">Французский язык</option>
+                        </select>
                       </label>
-                      <label class="form-box__label-radio">
-                        <input type="radio" class="form-box__input-radio" name="radio" value="2">
-                        <span class="form-box__radio-text">Занятия в клубе</span>
-                      </label>
-                    </div>
-                    <div class="form-box__adult-field">
-                      <label class="form-box__label-name">
-                        <input type="text" class="form-box__input-name field-style form-box__input" placeholder="Имя"
+                      <div class="form-box__radio-field">
+                        <label class="form-box__label-radio">
+                          <input type="radio" class="form-box__input-radio" name="radio" value="1" checked>
+                          <span class="form-box__radio-text">Онлайн-занятия</span>
+                        </label>
+                        <label class="form-box__label-radio">
+                          <input type="radio" class="form-box__input-radio" name="radio" value="2">
+                          <span class="form-box__radio-text">Занятия в клубе</span>
+                        </label>
+                      </div>
+                      <div class="form-box__adult-field">
+                        <label class="form-box__label-name">
+                          <input type="text" class="form-box__input-name field-style form-box__input" placeholder="Имя"
+                            required>
+                        </label>
+                        <label class="form-box__label-phone">
+                          <input type="tel" class="form-box__input-phone field-style form-box__input"
+                            placeholder="Телефон" required>
+                        </label>
+                      </div>
+                      <label class="form-box__label-email">
+                        <input type="email" class="form-box__input-email field-style form-box__input" placeholder="Почта"
                           required>
                       </label>
-                      <label class="form-box__label-phone">
-                        <input type="tel" class="form-box__input-phone field-style form-box__input"
-                          placeholder="Телефон" required>
+                    </div>
+                    <button class="form-box__btn btn-reset btn">Отправить</button>
+                  </form>
+                </div>
+              </div>
+              <div class="tabs__panel">
+                <div class="form-box">
+                  <form class="form-box__form" data-form="child-form">
+                    <div class="form-box__inner">
+                      <label class="form-box__label-select">
+                        <select class="form-box__select">
+                          <option value="english" class="form-box__option">Английский язык</option>
+                          <option value="german" class="form-box__option">Немецкий язык</option>
+                          <option value="spanish" class="form-box__option">Испанский язык</option>
+                          <option value="french" class="form-box__option">Французский язык</option>
+                        </select>
+                      </label>
+                      <div class="form-box__radio-field">
+                        <label class="form-box__label-radio">
+                          <input type="radio" class="form-box__input-radio" name="radio" value="1" checked>
+                          <span class="form-box__radio-text">Онлайн-занятия</span>
+                        </label>
+                        <label class="form-box__label-radio">
+                          <input type="radio" class="form-box__input-radio" name="radio" value="2">
+                          <span class="form-box__radio-text">Занятия в клубе</span>
+                        </label>
+                      </div>
+                      <div class="form-box__adult-field">
+                        <label class="form-box__label-name">
+                          <input type="text" class="form-box__input-name field-style form-box__input" placeholder="Имя"
+                            required>
+                        </label>
+                        <label class="form-box__label-phone">
+                          <input type="tel" class="form-box__input-phone field-style form-box__input" placeholder="Телефон"
+                            required>
+                        </label>
+                      </div>
+                      <div class="form-box__child-field">
+                        <label class="form-box__label-name">
+                          <input type="text" class="form-box__input-child field-style form-box__input"
+                            placeholder="Имя ребенка" required>
+                        </label>
+                        <label class="form-box__label-age">
+                          <input type="number" class="form-box__input-age field-style form-box__input"
+                            placeholder="Возраст ребенка" required>
+                        </label>
+                      </div>
+                      <label class="form-box__label-email">
+                        <input type="email" class="form-box__input-email field-style form-box__input" placeholder="Почта"
+                          required>
                       </label>
                     </div>
-                    <label class="form-box__label-email">
-                      <input type="email" class="form-box__input-email field-style form-box__input" placeholder="Почта"
-                        required>
-                    </label>
-                  </div>
-                  <button class="form-box__btn btn-reset btn">Отправить</button>
-                </form>
-              </div>
-            </div>
-            <div class="tabs__panel">
-              <form class="form-box__form form-box__form--child-1" data-form="child-form">
-                <div class="form-box__inner">
-                  <label class="form-box__label-select">
-                    <select class="form-box__select">
-                      <option value="english" class="form-box__option">Английский язык</option>
-                      <option value="german" class="form-box__option">Немецкий язык</option>
-                      <option value="spanish" class="form-box__option">Испанский язык</option>
-                      <option value="french" class="form-box__option">Французский язык</option>
-                    </select>
-                  </label>
-                  <div class="form-box__radio-field">
-                    <label class="form-box__label-radio">
-                      <input type="radio" class="form-box__input-radio" name="radio" value="1" checked>
-                      <span class="form-box__radio-text">Онлайн-занятия</span>
-                    </label>
-                    <label class="form-box__label-radio">
-                      <input type="radio" class="form-box__input-radio" name="radio" value="2">
-                      <span class="form-box__radio-text">Занятия в клубе</span>
-                    </label>
-                  </div>
-                  <div class="form-box__adult-field">
-                    <label class="form-box__label-name">
-                      <input type="text" class="form-box__input-name field-style form-box__input" placeholder="Имя"
-                        required>
-                    </label>
-                    <label class="form-box__label-phone">
-                      <input type="tel" class="form-box__input-phone field-style form-box__input" placeholder="Телефон"
-                        required>
-                    </label>
-                  </div>
-                  <div class="form-box__child-field">
-                    <label class="form-box__label-name">
-                      <input type="text" class="form-box__input-child field-style form-box__input"
-                        placeholder="Имя ребенка" required>
-                    </label>
-                    <label class="form-box__label-age">
-                      <input type="number" class="form-box__input-age field-style form-box__input"
-                        placeholder="Возраст ребенка" required>
-                    </label>
-                  </div>
-                  <label class="form-box__label-email">
-                    <input type="email" class="form-box__input-email field-style form-box__input" placeholder="Почта"
-                      required>
-                  </label>
+                    <button class="form-box__btn btn-reset btn">Отправить</button>
+                  </form>
                 </div>
-                <button class="form-box__btn btn-reset btn">Отправить</button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
+        <img src="img/lesson.jpg" alt="Декоративное изображение" class="trial__img">
       </div>
-      <img src="img/lesson.jpg" alt="Декоративное изображение" class="trial__img">
     </div>
   </div>
 </section>
