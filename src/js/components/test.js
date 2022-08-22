@@ -192,3 +192,139 @@
 // if (tabTrial) {
 //   const secondTab = new GraphTabs('tab-3');
 // }
+
+
+// if (filters) {
+
+//     const array = Array.from(document.querySelector('.packages__images-list').children);
+//     const visItems = array.slice(shownCards);
+
+//     visItems.forEach(el => el.classList.add('hide'));
+
+//   filters.addEventListener('click', event => {
+
+//     let filterClass = event.target.dataset.filter;
+
+//     filterBox.forEach(elem => {
+//       elem.classList.remove('hide');
+
+//       if (!elem.classList.contains(filterClass) && filterClass !== 'individual') {
+//         elem.classList.add('hide');
+//         filterTime.style.display = 'none';
+//       }
+
+//       if (!elem.classList.contains(filterClass) && filterClass !== 'speaking') {
+//         elem.classList.add('hide');
+//         filterTime.style.display = 'flex';
+//       }
+
+//       if (!elem.classList.contains(filterClass) && filterClass !== '30-minutes') {
+//         elem.classList.add('hide');
+//       }
+
+//       if (!elem.classList.contains(filterClass) && filterClass !== '60-minutes') {
+//         elem.classList.add('hide');
+//       }
+
+
+
+//     });
+
+//   });
+
+
+// }
+
+
+// inputs.forEach(input => {
+  //   if (input.hasAttribute('checked') && input.dataset.filter == 'individual') {
+  //     filterBox.forEach(box => {
+  //       if (box.classList.contains('individual')) {
+  //         box.style.display = 'block';
+  //       }
+
+  //       if (box.classList.contains('60-minutes')) {
+  //         box.style.display = 'block';
+  //       }
+  //     })
+  //   }
+  // })
+
+
+
+// inputs.forEach(input => {
+//   filterBox.forEach(box => {
+//     if (input.hasAttribute('checked') && input.dataset.filter == 'individual') {
+//       if (box.classList.contains('individual')) {
+//         box.style.display = 'block';
+//       }
+
+//       if (box.classList.contains('60-minutes')) {
+//         box.style.display = 'block';
+//       }
+//     }
+
+//     if (input.hasAttribute('checked') && input.dataset.filter == '60-minutes') {
+//       if (box.classList.contains('individual')) {
+//         box.style.display = 'block';
+//       }
+
+//       if (box.classList.contains('60-minutes')) {
+//         box.style.display = 'block';
+//       }
+//     }
+//   })
+// })
+
+
+// menuBtn.addEventListener('click', () => {
+//   menu.classList.toggle('open');
+
+//   // если открыто меню
+//   if (menu.classList.contains('open')) {
+//     menuBtn.setAttribute('aria-expanded', true);
+//     menu.setAttribute('aria-hidden', false);
+//     menuBtn.setAttribute('title', 'Закрыть меню')
+//   } else {
+//     menuBtn.setAttribute('aria-expanded', false);
+//     menu.setAttribute('aria-hidden', true);
+//     menuBtn.setAttribute('title', 'Открыть меню')
+//   }
+// });
+
+
+// menuBtn.addEventListener('click', () => {
+//   menu.classList.toggle('open');
+//   menuBtn.classList.toggle('after');
+
+//   // если открыто меню
+//   if (menu.classList.contains('open')) {
+//     menuBtn.setAttribute('aria-expanded', true);
+//     menu.setAttribute('aria-hidden', false);
+//     menuBtn.setAttribute('title', 'Закрыть меню')
+//   } else { // если закрыто меню
+//     menuBtn.setAttribute('aria-expanded', false);
+//     menu.setAttribute('aria-hidden', true);
+//     menuBtn.setAttribute('title', 'Открыть меню')
+//   }
+// });
+
+
+// filterBox.forEach(function (item) {
+  //   if (item.classList.contains('individual')) {
+  //     counter++;
+  //   }
+  // })
+
+  // const imagesListArr = Array.from(imagesList.children);
+  // const hideItems = imagesListArr.slice(counter);
+  // hideItems.forEach(hiddenItem => hiddenItem.classList.add('hide'));
+
+
+  // filterItems.forEach(filter => {
+  //   filter.classList.remove('active');
+  // })
+
+  // if (!filter.classList.contains('active')) {
+  //   filter.classList.add('active');
+  // }

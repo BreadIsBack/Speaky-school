@@ -23,7 +23,7 @@
   }
 
   &__close {
-    right: 371px;
+    right: 335px;
     top: 40px;
     width: auto;
     height: auto;
@@ -34,7 +34,8 @@
     color: var(--main-color);
 
     &--payment {
-      right: 270px;
+      top: 38px;
+      right: 262px;
     }
   }
 }

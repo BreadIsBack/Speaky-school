@@ -1,7 +1,6 @@
 .contacts {
-  &__svg {
-    width: 18px;
-    height: 18px;
+  &__list {
+    display: flex;
   }
 
   &__item {
@@ -10,8 +9,19 @@
     }
   }
 
-  &__list {
-    display: flex;
-    align-items: center;
+  &__link {
+    &:hover {
+      svg {
+        fill: #ffeca0;
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__svg {
+    width: 18px;
+    height: 18px;
+    transition: fill 0.3s ease-in-out;
+    object-fit: cover;
   }
 }

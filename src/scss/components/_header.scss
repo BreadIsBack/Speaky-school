@@ -4,21 +4,39 @@
     align-items: center;
     padding-top: 50px;
     padding-bottom: 60px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__logo {
+    margin-right: 76px;
   }
 
   &__nav {
-    margin-left: 76px;
-    margin-right: 269px;
-    margin-bottom: 6px;
+    margin-right: auto;
   }
 
   &__contacts {
     margin-right: 68px;
     display: flex;
+    align-items: center;
   }
 
   &__svg {
     width: 18px;
     height: 18px;
+    transition: fill 0.3s ease-in-out;
+    object-fit: cover;
+  }
+
+  &__phone {
+    &:hover {
+      svg {
+        fill: #ffeca0;
+        transition: fill 0.3s ease-in-out;
+      }
+    }
   }
 }

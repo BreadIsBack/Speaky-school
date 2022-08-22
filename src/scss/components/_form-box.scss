@@ -1,5 +1,6 @@
 .form-box {
   &__input {
+    width: 100%;
     font-weight: 300;
     font-size: 16px;
     line-height: 26px;
@@ -117,4 +118,8 @@
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+.just-validate-error-field {
+  border-color: #ffa0a0;
 }
