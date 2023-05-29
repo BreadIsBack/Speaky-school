@@ -3,9 +3,24 @@
     <a href="index.html" class="header__logo logo">
       <img src="img/logo.png" alt="Логотип Speaky School">
     </a>
-    <nav class="nav header__nav">
+    <nav class="header__nav nav">
 
-      <ul class="nav__list list-reset">
+      <ul class="nav__list list-reset nav__list--nav">
+        <a href="index.html" class="header__logo logo header__logo--nav">
+          <img src="img/logo.png" alt="Логотип Speaky School">
+        </a>
+        <li class="nav__item">
+          <a href="adults.html" class="nav__link">Обучение детей онлайн</a>
+        </li>
+        <li class="nav__item">
+          <a href="adults.html" class="nav__link">Обучение детей оффлайн</a>
+        </li>
+        <li class="nav__item">
+          <a href="adults.html" class="nav__link">Обучение взрослых</a>
+        </li>
+      </ul>
+
+      <ul class="nav__list list-reset nav__list--relative-nav">
         <li class="nav__item nav__item--relative">
           <button class="nav__btn btn-reset" aria-expanded="false" title="Открыть меню">Обучение детей</button>
           <div class="nav__dropdown-menu" aria-hidden="true">
@@ -17,6 +32,47 @@
           <a href="adults.html" class="nav__link">Обучение взрослых</a>
         </li>
       </ul>
+
+      <div class="contacts header__contacts header__contacts--nav">
+        <ul class="contacts__list list-reset">
+          <li class="contacts__item">
+            <a href="https://www.facebook.com/" title="Не забудьте включить VPN!" target="_blank" class="contacts__link">
+              <svg class="contacts__svg" role="img" aria-label="Facebook">
+                <use xlink:href="img/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://www.instagram.com/" title="Не забудьте включить VPN!" target="_blank" class="contacts__link">
+              <svg class="contacts__svg" role="img" aria-label="instagram">
+                <use xlink:href="img/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://www.whatsapp.com/?lang=ru" target="_blank" class="contacts__link">
+              <svg class="contacts__svg" role="img" aria-label="whatsapp">
+                <use xlink:href="img/sprite.svg#whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="https://vk.com/" target="_blank" class="contacts__link">
+              <svg class="contacts__svg" role="img" aria-label="VK">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="tel:89999999999" class="contacts__link header__phone">
+              <svg class="header__svg" role="img" aria-label="Телефон">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </nav>
     <div class="contacts header__contacts">
       <ul class="contacts__list list-reset">
@@ -48,12 +104,17 @@
             </svg>
           </a>
         </li>
+        <li class="contacts__item">
+          <a href="tel:89999999999" class="contacts__link header__phone">
+            <svg class="header__svg" role="img" aria-label="Телефон">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+          </a>
+        </li>
       </ul>
     </div>
-    <a href="tel:89999999999" class="header__phone">
-      <svg class="header__svg" role="img" aria-label="Телефон">
-        <use xlink:href="img/sprite.svg#phone"></use>
-      </svg>
-    </a>
+    <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>

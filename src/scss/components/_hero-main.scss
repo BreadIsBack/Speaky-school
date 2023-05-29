@@ -5,10 +5,24 @@
 
   &__action {
     max-width: 665px;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
+
+    @include mobile {
+      max-width: 400px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
   }
 }
 
@@ -20,8 +34,16 @@
 
   &__images-inner {
     position: relative;
+
     &:not(:last-child) {
       margin-right: 97px;
+    }
+
+    @include mobile {
+      margin-right: 0 !important;
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -46,5 +68,9 @@
     &:not(:last-child) {
       margin-bottom: 9px;
     }
+  }
+
+  @include mobile {
+    flex-direction: column;
   }
 }

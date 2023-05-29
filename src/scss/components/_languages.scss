@@ -1,6 +1,10 @@
 .languages {
   &__container {
-    padding: 75px 220px 85px 213px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 0 85px 0;
+
     @include background;
   }
 
@@ -11,12 +15,24 @@
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap-lang);
+
+    @include mini-tablet {
+      --elems-lang: 2;
+    }
+
+    @include mobile {
+      --elems-lang: 1;
+      width: 176px;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
+    width: calc((100% - (var(--elems-lang) - 1) * var(--gap-lang)) / (var(--elems-lang)));
   }
 
   &__img {
@@ -28,5 +44,10 @@
     font-size: 18px;
     line-height: 30px;
     color: var(--main-color);
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }

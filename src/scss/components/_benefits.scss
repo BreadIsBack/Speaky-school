@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -12,6 +16,11 @@
   &__info {
     max-width: 340px;
     margin-right: 86px;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__descr {
@@ -29,10 +38,21 @@
     &--small {
       max-width: 236px;
       margin-right: 77px;
+
+      @include tablet {
+        max-width: 314px;
+        margin-right: 0;
+      }
     }
 
     &--big {
       max-width: 314px;
+    }
+
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
 

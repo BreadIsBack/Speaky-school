@@ -1,6 +1,10 @@
 .contacts {
   &__list {
     display: flex;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__item {

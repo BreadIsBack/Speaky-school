@@ -26,6 +26,7 @@
 
   &__inner {
     display: flex;
+    margin-bottom: 30px;
     flex-direction: column;
   }
 
@@ -35,11 +36,26 @@
 
   &__radio-field {
     margin-bottom: 14px;
+
+    @include mobile-small {
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
   }
 
   &__label-radio {
     &:not(:last-child) {
       margin-right: 67px;
+    }
+
+    @include mobile-small {
+      font-size: 14px;
+      line-height: 22px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -108,7 +124,8 @@
   }
 
   &__btn {
-    margin-top: 30px;
+    display: block;
+    margin: 0 auto;
   }
 
   &__text {

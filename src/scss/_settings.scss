@@ -134,6 +134,11 @@ a {
   line-height: 34px;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+
+  @include mini-tablet {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .title-small {
@@ -148,17 +153,18 @@ a {
   position: relative;
   width: fit-content;
   z-index: 1;
+  text-shadow: 0px 10px 10px #ffeca0;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 10px;
-    left: 0;
-    bottom: 10px;
-    background-color: #ffeca0;
-    z-index: -1;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 100%;
+  //   height: 10px;
+  //   left: 0;
+  //   bottom: 10px;
+  //   background-color: #ffeca0;
+  //   z-index: -1;
+  // }
 }
 
 .btn {
@@ -191,6 +197,10 @@ a {
 
 .section-offset {
   padding-bottom: 140px;
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
 }
 
 .field-style {
@@ -213,5 +223,97 @@ a {
   &:hover {
     color: #ffeca0;
     transition: color 0.3s ease-in-out;
+  }
+}
+
+.burger {
+  --burger-width: 40px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  z-index: 1000;
+  display: none;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--dark-color);
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger:focus::after {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: #fffbed;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
   }
 }

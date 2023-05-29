@@ -18,24 +18,29 @@
   &__list {
     margin-bottom: 97px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap-ed);
+
+    @include mini-tablet-start {
+      --elems-ed: 3;
+      --gap-ed: 30px;
+    }
+
+    @include mobile-small {
+      --gap-ed: 10px;
+    }
   }
 
   &__item {
+    position: relative;
     padding-top: 20px;
+    width: calc((100% - (var(--elems-ed) - 1) * var(--gap-ed)) / (var(--elems-ed)));
     display: flex;
     flex-direction: column;
     text-align: center;
-    position: relative;
     z-index: -1;
-
-    &:not(:last-child) {
-      margin-right: 89px;
-    }
-
-    &:nth-child(4) {
-      min-width: 135px;
-    }
 
     &::before {
       position: absolute;
@@ -87,6 +92,13 @@
     min-width: 88px;
   }
 
+  &__item-descr {
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
   &__small-title {
     font-weight: 500;
     font-size: 18px;
@@ -98,10 +110,19 @@
     margin-bottom: 60px;
     display: flex;
     align-items: center;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__img {
     margin-right: 53px;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 60px;
+    }
   }
 
   &__example-title {
@@ -111,6 +132,11 @@
 
   &__example-descr {
     margin: 0;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 
   &__steps-list {
@@ -155,6 +181,27 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+    }
+
+    @include mobile-small {
+      &:nth-child(even) {
+        padding-left: 0;
+        align-self: flex-start;
+
+        &:before {
+          display: none;
+        }
+      }
+
+      &:nth-child(odd) {
+        padding-right: 0;
+
+        &:not(:last-child) {
+          &::before {
+            display: none;
+          }
+        }
+      }
     }
   }
 
@@ -204,6 +251,12 @@
     &--5 {
       &::before {
         background-image: url('../img/education/5.svg');
+      }
+    }
+
+    @include mobile-small {
+      &::before {
+        left: 0;
       }
     }
   }

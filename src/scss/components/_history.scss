@@ -8,10 +8,10 @@
   }
 
   &__slide-timeline {
-
+    position: relative;
     margin-bottom: 60px;
     display: flex;
-    position: relative;
+    justify-content: space-around;
 
     &::before {
       position: absolute;
@@ -26,30 +26,46 @@
   }
 
   &__years {
-    display: inline-block;
+    align-items: center;
+    text-align: center;
+    // display: inline-block;
 
-    &:not(:last-child) {
-      margin-right: 211px;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 211px;
+    // }
 
-    &:first-child {
-      margin-left: 45px;
-    }
+    // &:first-child {
+    //   margin-left: 45px;
+    // }
   }
 
   &__slide-container {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   &__img {
     margin-right: 82px;
+
+    @include mobile {
+      margin-right: 0;
+    }
   }
 
   &__slide-inner {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      order: -1;
+      margin-bottom: 40px;
+    }
   }
 
   &__subtitle {
@@ -68,13 +84,8 @@
   }
 }
 
-.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 0;
-}
-
 .swiper-pagination-bullets {
-  margin-left: 50px;
+  justify-content: space-around;
 }
 
 .swiper-pagination-bullet:hover {
@@ -92,11 +103,6 @@
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  &:not(:last-child) {
-    margin-right: 232px;
-  }
-}
 
 .swiper-pagination-bullet-active {
   border: none;
