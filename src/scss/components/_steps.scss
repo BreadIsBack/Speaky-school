@@ -7,8 +7,16 @@
   &__list {
     display: grid;
     grid-template-columns: 147px 154px 129px 171px;
-    grid-column-gap: 91px;
+    gap: 91px;
     justify-content: center;
+
+    @include mini-tablet-start {
+      grid-template-columns: repeat(2, 150px);
+    }
+
+    @include mobile-small {
+      grid-template-columns: repeat(1, 150px);
+    }
   }
 
   &__item {

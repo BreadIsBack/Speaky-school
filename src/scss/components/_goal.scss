@@ -3,10 +3,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__img {
     margin-right: 88px;
+
+    @include small-tablet {
+      margin-right: 0;
+      margin-bottom: 58px;
+    }
   }
 
   &__content {

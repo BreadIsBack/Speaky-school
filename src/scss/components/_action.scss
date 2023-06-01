@@ -1,16 +1,25 @@
 .action {
   &__container {
-    padding: 67px 100px 67px 100px;
+    padding: 67px 0;
     border-radius: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fffbed;
+
+    @include background;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__inner {
-    margin-right: 181px;
     max-width: 333px;
+    margin-right: 181px;
+
+    @include small-tablet {
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -19,5 +28,11 @@
 
   &__subtitle {
     display: block;
+  }
+
+  &__btn {
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 }

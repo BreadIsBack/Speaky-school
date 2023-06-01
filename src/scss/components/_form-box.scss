@@ -123,17 +123,17 @@
     }
   }
 
-  &__btn {
-    display: block;
-    margin: 0 auto;
-  }
-
   &__text {
     margin: 0;
+    margin-bottom: 10px;
     max-width: 399px;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+
+    @include mini-tablet {
+      margin-bottom: 30px;
+    }
   }
 }
 

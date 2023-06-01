@@ -10,6 +10,7 @@
 
   &__title {
     margin-bottom: 40px;
+    align-self: auto;
   }
 
   &__list {
@@ -33,6 +34,10 @@
     display: flex;
     align-items: center;
     width: calc((100% - (var(--elems-lang) - 1) * var(--gap-lang)) / (var(--elems-lang)));
+
+    @include mini-tablet {
+      justify-content: center;
+    }
   }
 
   &__img {
@@ -46,6 +51,7 @@
     color: var(--main-color);
 
     @include tablet {
+      min-width: 104px;
       font-size: 16px;
       line-height: 24px;
     }

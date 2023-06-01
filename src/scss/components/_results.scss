@@ -6,10 +6,20 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 253px 311px 260px;
+    // grid-template-columns: 253px 311px 260px;
+    grid-template-columns: 260px 300px 260px;
     justify-content: center;
     grid-column-gap: 25px;
     grid-row-gap: 40px;
+
+    @include mini-tablet-start {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 0.7fr);
+      grid-auto-rows: 1fr;
+    }
   }
 
   &__item {

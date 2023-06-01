@@ -2,18 +2,33 @@
   &__container {
     display: flex;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__img {
     margin-right: 73px;
+
+    @include tablet {
+      order: 2;
+      margin: 0;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 40px;
   }
 
@@ -22,6 +37,11 @@
     grid-template-columns: repeat(3, max-content);
     grid-column-gap: 100px;
     grid-row-gap: 34px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, max-content);
+      grid-column-gap: 50px;
+    }
   }
 
   &__item {
@@ -106,6 +126,12 @@
 
       &::after {
         border-color: currentColor;
+      }
+    }
+
+    @include small-tablet {
+      &:nth-child(3n + 3) {
+        grid-column: 1 / 3;
       }
     }
   }

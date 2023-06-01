@@ -22,12 +22,21 @@ html {
   font-size: 16px;
   line-height: 26px;
   color: var(--main-color);
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 img {
   height: auto;
   max-width: 100%;
   object-fit: cover;
+}
+
+picture {
+  font-size: 0;
 }
 
 a {
@@ -124,6 +133,11 @@ a {
   line-height: 66px;
   letter-spacing: 0.02em;
   color: var(--dark-color);
+
+  @include mobile {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .title-submain {
@@ -147,6 +161,11 @@ a {
   font-size: 18px;
   line-height: 30px;
   color: var(--dark-color);
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .title-style {

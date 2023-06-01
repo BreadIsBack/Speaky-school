@@ -7,14 +7,23 @@
   &__inner {
     margin-bottom: 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__inner-descr {
-    margin-right: 80px;
     display: flex;
     flex-direction: column;
     max-width: 600px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__inner-title {
@@ -40,23 +49,78 @@
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 
-  &__content {
-    display: flex;
-  }
+  // &__content {
+  //   display: flex;
 
-  &__column {
-    max-width: 620px;
+  //   @include mobile {
+  //     flex-direction: column;
+  //   }
+  // }
 
-    &:not(:last-child) {
-      margin-right: 20px;
+  // &__column {
+  //   flex: 1 0;
+  //   &:not(:last-child) {
+  //     margin-right: 20px;
+  //   }
+  // }
+
+  // &__item {
+  //   &:not(:last-child) {
+  //     margin-bottom: 100px;
+  //   }
+  // }
+
+  // &__item-title {
+  //   margin-bottom: 30px;
+  // }
+
+  // &__content-text {
+  //   margin: 0;
+  //   margin-bottom: 30px;
+  // }
+
+  &__list {
+    // display: grid;
+    // grid-template-columns: repeat(2, 620px);
+    // column-gap: 20px;
+    // row-gap: 100px;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: flex-start;
+
+    column-count: 2;
+    column-gap: 20px;
+
+    @include small-tablet {
+      column-count: 1;
     }
   }
 
   &__item {
+    display: inline-block;
+    width: 100%;
+
     &:not(:last-child) {
       margin-bottom: 100px;
+    }
+
+    // &:not(:last-child) {
+    //   margin-bottom: 100px;
+    // }
+
+    @include small-tablet {
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -64,8 +128,11 @@
     margin-bottom: 30px;
   }
 
-  &__content-text {
+  &__subitem-text {
     margin: 0;
-    margin-bottom: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }

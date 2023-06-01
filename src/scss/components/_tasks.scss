@@ -1,16 +1,25 @@
 .tasks {
   &__container {
-    @include background;
-
-    padding: 100px 243px 103px 197px;
+    padding: 100px 0 103px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include background;
+
+    @include mini-tablet {
+      flex-direction: column;
+    }
   }
 
   &__content {
     margin-right: 94px;
     max-width: 435px;
+
+    @include mini-tablet {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {

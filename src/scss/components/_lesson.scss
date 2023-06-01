@@ -2,9 +2,10 @@
   &__container {
     display: flex;
     align-items: center;
-    @include background;
     justify-content: space-between;
     overflow: hidden;
+
+    @include background;
 
     @include small-tablet {
       flex-direction: column;
@@ -12,29 +13,31 @@
   }
 
   &__content {
-    margin-right: auto;
+
     padding-left: 106px;
-    // padding: 80px 179px 81px 106px;
-    // padding: 83px 81px 83px 80px;
 
-    &--payment {
-      margin-right: 81px;
-      padding-left: 80px;
-      max-width: 420px;
-    }
+    // &--payment {
+    //   margin-right: 81px;
+    //   padding-left: 80px;
+    //   max-width: 420px;
+    // }
 
-    @include mini-tablet-start {
+    @include tablet {
+      margin-right: 0;
       padding: 0 10px 0 50px;
     }
 
     @include mini-tablet {
       padding: 0 5px;
-      margin: 0;
     }
 
     @include small-tablet {
       margin-bottom: 60px;
       padding-top: 65px;
+    }
+
+    &--payment {
+      padding-left: 5px;
     }
   }
 
@@ -53,6 +56,7 @@
 
       &--adaptive {
         display: block;
+        width: 100%;
       }
     }
   }

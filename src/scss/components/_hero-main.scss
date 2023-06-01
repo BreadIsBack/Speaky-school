@@ -24,35 +24,42 @@
   @include tablet {
     flex-direction: column;
   }
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
 }
 
 
 .hero-images {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-column-gap: 97px;
 
   &__images-inner {
     position: relative;
 
-    &:not(:last-child) {
-      margin-right: 97px;
-    }
+    // &:not(:last-child) {
+    //   margin-right: 97px;
+    // }
 
-    @include mobile {
-      margin-right: 0 !important;
-      &:not(:last-child) {
-        margin-bottom: 60px;
-      }
-    }
+    // @include mobile {
+    //   margin-right: 0 !important;
+
+    //   &:not(:last-child) {
+    //     margin-bottom: 60px;
+    //   }
+    // }
   }
 
   &__descr {
     position: absolute;
     content: "";
-    right: -30px;
-    bottom: 0;
-    max-width: 150px;
+    left: 50%;
+    bottom: 10px;
   }
 
   &__text {
@@ -70,7 +77,25 @@
     }
   }
 
+  @include tablet {
+    justify-content: center;
+
+    &--adults {
+    justify-content: flex-start;
+    }
+  }
+
+  @include mini-tablet-start {
+    justify-content: center;
+    grid-template-columns: repeat(2, 150px);
+    grid-row-gap: 60px;
+  }
+
   @include mobile {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 150px);
+  }
+
+  @include mobile-small {
+    justify-content: start;
   }
 }
