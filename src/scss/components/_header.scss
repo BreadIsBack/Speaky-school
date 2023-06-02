@@ -27,7 +27,7 @@
       display: none;
 
       @include tablet {
-        display: block;
+        display: inline-block;
         padding-top: 25px;
       }
     }

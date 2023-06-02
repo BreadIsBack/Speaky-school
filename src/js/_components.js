@@ -5,4 +5,3 @@ import './components/validation';
 import './components/slider';
 import './components/filter';
 import './components/modal';
-import './components/test';

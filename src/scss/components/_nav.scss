@@ -12,7 +12,8 @@
       display: none;
 
       @include tablet {
-        display: block;
+        display: flex;
+        flex-direction: column;
         text-align: center;
       }
     }
@@ -25,6 +26,8 @@
   }
 
   &__item {
+    display: inline-block;
+
     &--relative {
       position: relative;
     }

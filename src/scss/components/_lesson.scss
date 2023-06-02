@@ -15,20 +15,15 @@
   &__content {
 
     padding-left: 106px;
-
-    // &--payment {
-    //   margin-right: 81px;
-    //   padding-left: 80px;
-    //   max-width: 420px;
-    // }
+    padding-top: 60px;
 
     @include tablet {
       margin-right: 0;
-      padding: 0 10px 0 50px;
+      padding: 60px 10px 0 50px;
     }
 
     @include mini-tablet {
-      padding: 0 5px;
+      padding: 60px 5px 0;
     }
 
     @include small-tablet {
